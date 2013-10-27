@@ -20,7 +20,7 @@
   **/
   promise: function(options) {
 
-    if (typeof jQuery === 'undefined') {  
+    if (typeof jQuery === 'undefined' || !jQuery.Deferred) {  
       throw new Error('jQuery 1.5+ is required to use this function.');
     }
 
