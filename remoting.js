@@ -56,6 +56,6 @@
     options.args.push({ escape: options.escape });
     options.remoteAction.apply(options.scope, options.args);
 
-    return $deferred.promise();
+    return $deferred;
   }
 };
