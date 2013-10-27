@@ -34,8 +34,6 @@
       throw new Error('Invalid Arguments Array.'); 
     }
 
-    options.args = options.args || [];
-
     var $deferred = new jQuery.Deferred();
     if (typeof options.done === 'function') {
       $deferred.done(options.done);
@@ -59,7 +57,7 @@
 
     options.args.push(callback);
     options.args.push({ escape: options.escape !== false });
-    options.remoteAction.apply(options.scope, options.args);
+    options.remoteAction.apply(options.scope, options.args || []);
 
     return $deferred;
   }
