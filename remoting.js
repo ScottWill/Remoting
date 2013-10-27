@@ -1,3 +1,9 @@
+// ==========================================
+// Copyright 2013 Scott Will
+// Licensed under The MIT License
+// http://opensource.org/licenses/MIT
+// ==========================================
+
 ;var Remoting = {
   /**
   * Return a jQuery Deferred Promise to call an Apex controller method on the server
