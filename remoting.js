@@ -35,7 +35,6 @@
     }
 
     options.args = options.args || [];
-    options.escape = options.escape !== false;
 
     var $deferred = new jQuery.Deferred();
     if (typeof options.done === 'function') {
@@ -59,7 +58,7 @@
     };
 
     options.args.push(callback);
-    options.args.push({ escape: options.escape });
+    options.args.push({ escape: options.escape !== false });
     options.remoteAction.apply(options.scope, options.args);
 
     return $deferred;
