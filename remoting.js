@@ -47,7 +47,7 @@
         $deferred.resolve(result);
       }
       else {
-        if (!options.suppressLoginRedirect && event.message.indexOf('Logged in?', event.message.length - 'Logged in?'.length) !== -1) {
+        if (!options.suppressLoginRedirect && event.message.indexOf('Logged in?', event.message.length - 10) !== -1) {
           window.location.href = '/?startURL=' + encodeURIComponent(window.location.href.substring(window.location.origin.length));
           return;
         }
